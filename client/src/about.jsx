@@ -25,7 +25,7 @@ const About = () => {
           </p>
           
           <a 
-            href="/resume-placeholder.pdf" 
+            href="/Duc-Hoang-Nguyen-CV.pdf" 
             target="_blank" 
             rel="noreferrer" 
             className="download-link"

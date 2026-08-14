@@ -1,6 +1,15 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { useAuth } from '../src/context/AuthContext.jsx';
 
 const Layout = () => {
+  const { auth, isAdmin, signout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSignout = () => {
+    signout();
+    navigate('/')
+  }
+
   return (
     <div className="app-container">
       <header className="navbar">
@@ -18,6 +27,18 @@ const Layout = () => {
           <Link to="/education">Education</Link>
           <Link to="/services">Services</Link>
           <Link to="/contact">Contact Me</Link>
+
+          {auth ? (
+            <div className="nav-auth">
+              <span className="welcome-text">Welcome, <strong>{auth.user.name}</strong> ({isAdmin ? 'Admin' : 'User'})</span>
+              <button className="signout-btn" onClick={handleSignout}>Sign Out</button>
+            </div>
+          ) : (
+            <div className="nav-auth">
+              <Link to="/signin">Sign In</Link>
+              <Link to="/signup">Sign Up</Link>
+            </div>
+          )}
         </nav>
       </header>
       

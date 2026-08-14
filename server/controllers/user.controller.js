@@ -16,7 +16,7 @@ const create = async (req, res) => {
 };
 const list = async (req, res) => {
   try {
-    let users = await User.find().select("name email updated created");
+    let users = await User.find().select("name email role updated created");
     res.json(users);
   } catch (err) {
     return res.status(400).json({
@@ -40,9 +40,9 @@ const userByID = async (req, res, next, id) => {
   }
 };
 const read = (req, res) => {
-  req.profile.hashed_password = undefined;
-  req.profile.salt = undefined;
-  return res.json(req.profile);
+  req.user.hashed_password = undefined;
+  req.user.salt = undefined;
+  return res.json(req.user);
 };
 const update = async (req, res) => {
   try {

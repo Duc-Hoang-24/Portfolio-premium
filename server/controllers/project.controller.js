@@ -9,9 +9,7 @@ return res.status(200).json({
 message: "Successfully Created!"
 })
 } catch (err) {
-return res.status(400).json({
-error: errorHandler.getErrorMessage(err) 
-})
+return res.status(400).json({ error: err.message })
 } 
 }
 const list = async (req, res) => { 

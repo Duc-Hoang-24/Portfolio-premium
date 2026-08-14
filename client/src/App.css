@@ -16,6 +16,53 @@
   background-color: #2f4466;
   color: white;
 }
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  font-family: inherit;
+}
+
+.nav-auth .welcome-text {
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav-auth .welcome-text strong {
+  color: #7dd3fc;
+  font-weight: 600;
+}
+
+.nav-auth button.signout-btn {
+  background: transparent;
+  border: 1px solid #7dd3fc;
+  color: #7dd3fc;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-auth button.signout-btn:hover {
+  background: #7dd3fc;
+  color: #1e293b;
+}
+
+.nav-auth a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.nav-auth a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 .custom-logo {
   font-size: 1.5rem;
   font-weight: bold;
