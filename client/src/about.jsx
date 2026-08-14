@@ -23,6 +23,9 @@ const About = () => {
             I specialize in structuring backend business logic, writing modular C# components, and designing secure relational database systems. 
             My technical focus centers around translating client requirements into cleanly running applications. Beyond coding, I practice the violin, which keeps my analytical focus razor-sharp.
           </p>
+          <p>
+            I'm continuously expanding my skill set, most recently diving deeper into cloud deployment, automated testing, and CI/CD pipelines as part of my full-stack development journey.
+          </p>
           
           <a 
             href="/Duc-Hoang-Nguyen-CV.pdf" 
