@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../src/context/AuthContext.jsx'
 
-const API_URL = 'http://localhost:3000/api/projects'
+const API_URL = `${import.meta.env.VITE_API_URL}/api/projects`
 
 const Project = () => {
   const { auth, isAdmin } = useAuth()

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../src/context/AuthContext.jsx'
 
-const API_URL = 'http://localhost:3000/api/contacts'
+const API_URL = `${import.meta.env.VITE_API_URL}/api/contacts`
 
 const Contact = () => {
   const { auth, isAdmin } = useAuth()
